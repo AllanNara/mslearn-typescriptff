@@ -1,4 +1,16 @@
-class Car {
+type Direction = 'left' | 'right';
+
+interface Vehicle {
+    make: string,
+    // color: string,
+    doors: number,
+    accelerate(speed: number): string,
+    brake(): string,
+    // turn(direction: Direction): string,
+}
+
+
+class Car implements Vehicle {
     // Properties
     private static numberOfCars: number =  0
     private _make: string;
@@ -51,7 +63,7 @@ class Car {
     public turn(direction: 'left' | 'right'): string {
         return `${this.worker()} is turning ${direction}`
     };
-    public worker(): string {
+    protected worker(): string {
         return this._make
     };
 };
@@ -72,11 +84,14 @@ class Car {
 // console.log(myCar1.brake());
 // console.log(myCar1.turn('right'));
 
-// Instantiate the Car object with all parameters
-let myCar1 = new Car('Cool Car Company', 'blue', 2);
 // Instantiates the Car object with all parameters
 let myCar2 = new Car('Galaxy Motors', 'blue', 2);
 let myCar3 = new Car('Galaxy Motors', 'gray');
 // Returns 3
-console.log(Car.getNumberOfCars());
+// console.log(Car.getNumberOfCars());
+
+
+export default Car;
+
+
 

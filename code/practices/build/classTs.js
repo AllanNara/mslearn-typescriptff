@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 class Car {
     // Constructor
     constructor(make, color, doors = 4) {
@@ -79,10 +80,9 @@ Car.numberOfCars = 0;
 // console.log(myCar1.accelerate(35));
 // console.log(myCar1.brake());
 // console.log(myCar1.turn('right'));
-// Instantiate the Car object with all parameters
-let myCar1 = new Car('Cool Car Company', 'blue', 2);
 // Instantiates the Car object with all parameters
 let myCar2 = new Car('Galaxy Motors', 'blue', 2);
 let myCar3 = new Car('Galaxy Motors', 'gray');
 // Returns 3
-console.log(Car.getNumberOfCars());
+// console.log(Car.getNumberOfCars());
+exports.default = Car;
